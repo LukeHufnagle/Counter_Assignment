@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Counter</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+    }
+    #addform{
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #clearbtn{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<body>
+    <h1>Counter</h1>
+    <div class="container">
+        <form id ="addform" action="/add" method="POST">
+            <input type="submit" value="add">
+            <h5>{{session['refresh']}}</h5>
+        </form>
+        <form action="/addtwo" method="POST">
+            <input type="submit" value="Add Two">
+        </form>
+    </div>
+    <form id="clearbtn" action="/clear" method="POST">
+        <input type="submit" value="clear">
+    </form>
+</body>
+</html>
